@@ -1,27 +1,38 @@
 {
   "build": {
-    "beforeDevCommand": "yarn dev",
-    "beforeBuildCommand": "yarn build",
+    "beforeDevCommand": "yarn sidecar && yarn dev",
+    "beforeBuildCommand": "yarn sidecar && yarn build",
     "devPath": "http://localhost:1420",
     "distDir": "../dist",
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "demo-alpha",
-    "version": "0.0.0"
+    "productName": "demo-alpha"
   },
   "tauri": {
     "bundle": {
       "active": true,
+      "category": "DeveloperTool",
+      "longDescription": "This package is a simple Tauri demonstration project.\n\nIt shows multiple Tauri features.",
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "io.github.olivierlemasle.tauri.demo-alpha",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
         "icons/128x128@2x.png",
         "icons/icon.icns",
         "icons/icon.ico"
-      ]
+      ],
+      "externalBin": ["../bin/demo-sidecar"],
+      "resources": ["../*.md"],
+      "deb": {
+        "depends": ["iptables"],
+        "files": {
+          "/usr/share/doc/demo-alpha/copyright": "../LICENSE",
+          "/usr/lib/demo-alpha/assets": "../public/",
+          "/usr/lib/demo-alpha/assets/index.html": "../index.html"
+        }
+      }
     },
     "security": {
       "csp": null
@@ -38,7 +49,7 @@
   },
   "plugins": {
     "shell": {
-      "open": true
+      "scope": [{ "name": "../bin/demo-sidecar", "sidecar": true }]
     }
   }
 }

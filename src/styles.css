@@ -3,6 +3,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  text-align: start;
 
   color: #0f0f0f;
   background-color: #f6f6f6;
@@ -14,13 +15,27 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+}
+
 .container {
   margin: 0;
-  padding-top: 10vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  flex-direction: row;
+  justify-content: left;
+  gap: 2em;
+  height: 100%;
 }
 
 .logo {
@@ -78,13 +93,24 @@ button:active {
   border-color: #396cd8;
   background-color: #e8e8e8;
 }
+button:disabled {
+  color: #8f8f8f;
+}
+button:disabled:hover {
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+button:disabled:active {
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
 
 input,
 button {
   outline: none;
 }
 
-#greet-input {
+input {
   margin-right: 5px;
 }
 
