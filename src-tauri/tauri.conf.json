@@ -28,9 +28,7 @@
       "deb": {
         "depends": ["iptables"],
         "files": {
-          "/usr/share/doc/demo-alpha/copyright": "../LICENSE",
-          "/usr/lib/demo-alpha/assets": "../public/",
-          "/usr/lib/demo-alpha/assets/index.html": "../index.html"
+          "/usr/share/doc/demo-alpha/copyright": "../LICENSE"
         }
       }
     },
