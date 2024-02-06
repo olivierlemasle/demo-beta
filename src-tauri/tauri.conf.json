@@ -1,7 +1,7 @@
 {
   "build": {
-    "beforeDevCommand": "yarn sidecar && yarn dev",
-    "beforeBuildCommand": "yarn sidecar && yarn build",
+    "beforeDevCommand": "pnpm sidecar && pnpm dev",
+    "beforeBuildCommand": "pnpm sidecar && pnpm build",
     "devPath": "http://localhost:1420",
     "distDir": "../dist",
     "withGlobalTauri": false
