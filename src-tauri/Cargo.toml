@@ -1,5 +1,5 @@
 [package]
-name = "demo-alpha"
+name = "demo-beta"
 version = "0.0.1"
 description = "Demo application"
 authors = ["Olivier Lemasle <o.lemasle@gmail.com>"]

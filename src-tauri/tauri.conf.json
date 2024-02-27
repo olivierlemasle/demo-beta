@@ -1,6 +1,6 @@
 {
-  "productName": "demo-alpha",
-  "identifier": "io.github.olivierlemasle.tauri.demo-alpha",
+  "productName": "demo-beta",
+  "identifier": "io.github.olivierlemasle.tauri.demo-beta",
   "build": {
     "beforeBuildCommand": "pnpm sidecar && pnpm build",
     "beforeDevCommand": "pnpm sidecar && pnpm dev",
@@ -16,7 +16,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "demo-alpha",
+        "title": "demo-beta",
         "width": 800
       }
     ],
@@ -37,7 +37,7 @@
       "deb": {
         "depends": ["iptables"],
         "files": {
-          "/usr/share/doc/demo-alpha/copyright": "../LICENSE"
+          "/usr/share/doc/demo-beta/copyright": "../LICENSE"
         }
       }
     },
