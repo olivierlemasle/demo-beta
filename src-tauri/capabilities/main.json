@@ -1,7 +1,7 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "main-capability",
-  "description": "permissions that were migrated from v1",
+  "description": "Capability for the main window",
   "windows": ["main"],
   "permissions": [
     "path:default",
@@ -16,6 +16,8 @@
       "allow": [
         {
           "name": "../bin/demo-sidecar",
+          "cmd": "../bin/demo-sidecar",
+          "args": [],
           "sidecar": true
         }
       ]
